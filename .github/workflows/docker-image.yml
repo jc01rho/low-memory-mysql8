@@ -21,7 +21,7 @@ jobs:
       run:
         docker login -u $DOCKER_USER -p $DOCKER_PASS
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag low-memory-mysql8:$(date +%s)
+      run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/low-memory-mysql8:$(date +%s)
       
     - name: Push to Docker
       run: docker push ${{secrets.DOCKER_USER}}/low-memory-mysql8
