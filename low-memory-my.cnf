@@ -18,7 +18,7 @@
 # sort_buffer_size = 2M
 # read_rnd_buffer_size = 2M
 
-skip-host-cache
+host_cache_size=0
 skip-name-resolve
 
 # Disabling symbolic-links is recommended to prevent assorted security risks
